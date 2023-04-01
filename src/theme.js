@@ -12,6 +12,8 @@ export const theme = extendTheme({
       body: {
         fontFamily: 'var(--body-font)',
         color: 'var(--text-color)',
+        lineHeight: '1.4',
+        margin: '0 0 var(--header-height) 0',
         bg:
           props.colorMode === 'dark' ? 'var(--body-color)' : 'var(--body-color)'
       }
