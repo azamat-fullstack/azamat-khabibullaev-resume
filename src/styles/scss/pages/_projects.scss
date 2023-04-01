@@ -1,0 +1,122 @@
+.projects {
+  &__container {
+    position: relative;
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+      content: '';
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: absolute;
+      width: initial;
+      height: initial;
+      margin: initial;
+      font-size: 2.5rem;
+      color: var(--title-color);
+    }
+
+    .swiper-button-prev {
+      left: -2rem;
+      top: 4.5rem;
+      @media screen and (min-width: 340px) {
+        left: -1rem;
+      }
+      @media screen and (min-width: 425px) {
+        left: 1rem;
+      }
+      @media screen and (min-width: 576px) {
+        left: 5rem;
+      }
+      @media screen and (min-width: 720px) {
+        left: 10rem;
+      }
+      @media screen and (min-width: 768px) {
+        left: 1rem;
+      }
+      @media screen and (min-width: 1024px) {
+        left: -1rem;
+      }
+    }
+
+    .swiper-button-next {
+      right: -2rem;
+      top: 4.5rem;
+      @media screen and (min-width: 340px) {
+        right: -1rem;
+      }
+      @media screen and (min-width: 425px) {
+        right: 1rem;
+      }
+      @media screen and (min-width: 576px) {
+        right: 5rem;
+      }
+      @media screen and (min-width: 720px) {
+        right: 10rem;
+      }
+      @media screen and (min-width: 768px) {
+        right: 1rem;
+      }
+      @media screen and (min-width: 1024px) {
+        right: -1rem;
+      }
+    }
+
+    .swiper-slide {
+      margin-bottom: 4.5rem;
+    }
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+      bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+      background-color: var(--text-color-light);
+      opacity: initial;
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: var(--title-color);
+    }
+  }
+
+  &__content {
+    display: grid;
+    justify-content: center;
+  }
+
+  &__img {
+    width: 250px;
+    border-radius: 0.75rem;
+    margin-bottom: var(--m-1-25);
+  }
+
+  &__subtitle {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+  }
+
+  &__title {
+    font-size: var(--h2-font-size);
+    margin: var(--m-0-5) 0 var(--m-1-25) 0;
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+
+    i {
+      font-size: 1rem;
+      transition: transform var(--transition);
+    }
+
+    &:hover {
+      i {
+        transform: translateX(0.25rem);
+      }
+    }
+  }
+}

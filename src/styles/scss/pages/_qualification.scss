@@ -1,0 +1,52 @@
+.qualification {
+  position: relative;
+
+  &__container {
+    row-gap: 3.5rem;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--m-2);
+
+    i {
+      font-size: 1rem;
+      font-weight: initial;
+    }
+  }
+
+  &__info {
+    display: grid;
+    row-gap: 2rem;
+  }
+
+  &__name {
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--m-1-25);
+  }
+
+  &__country,
+  &__year {
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+  }
+
+  &__country {
+    margin-bottom: var(--m-0-75);
+  }
+
+  &__img {
+    width: 150px;
+    position: absolute;
+    right: -3rem;
+    bottom: 12rem;
+    transform: rotate(15deg);
+    opacity: 0.1;
+  }
+}

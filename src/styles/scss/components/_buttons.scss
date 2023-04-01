@@ -1,0 +1,30 @@
+//// -----------------------------------------------------------------------------
+//// This file contains all styles related to the button component.
+//// -----------------------------------------------------------------------------
+//.button {
+//  display: inline-block;
+//  background-color: $firstColor;
+//  color: #fff;
+//  padding: 1rem;
+//  border-radius: 0.5rem;
+//  font-weight: $fontWeightMedium;
+//  transition: $transition;
+//  @include on-event {
+//    background-color: $firstColorAlt;
+//    text-decoration: none;
+//  }
+//}
+//
+//.button__icon {
+//  width: 1.25rem;
+//  margin-left: $mb-0-5;
+//  transition: $transition;
+//  svg {
+//    fill: #fff;
+//  }
+//}
+//
+//.button--flex {
+//  display: inline-flex;
+//  align-items: center;
+//}

@@ -1,0 +1,10 @@
+// ---------------------------------------------------------------------------------------
+// When having several themes, this file contains everything related to the default one.
+// ---------------------------------------------------------------------------------------
+
+body.chakra-ui-dark {
+  --title-color: hsl(var(--hue-color), 4%, 95%);
+  --text-color: hsl(var(--hue-color), 4%, 65%);
+  --body-color: hsl(var(--hue-color), 4%, 10%);
+  --container-color: hsl(var(--hue-color), 4%, 12%);
+}
