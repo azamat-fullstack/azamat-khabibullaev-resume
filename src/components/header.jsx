@@ -1,14 +1,10 @@
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { links } from '../constants'
-import { useDispatch, useSelector } from 'react-redux'
-import { changeTheme } from '../store/slices/themeSlice'
 import { useColorMode } from '@chakra-ui/react'
 
 function Header() {
   const [menu, setMenu] = useState(false)
-  const dispatch = useDispatch()
-  const { mode } = useSelector((state) => state.theme)
   const { colorMode, toggleColorMode } = useColorMode()
 
   const openMenu = () => {

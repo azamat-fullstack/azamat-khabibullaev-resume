@@ -10,9 +10,6 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 
-import { store } from './store'
-import { Provider } from 'react-redux'
-
 import { ChakraProvider } from '@chakra-ui/react'
 import { theme } from './theme.js'
 
@@ -20,10 +17,8 @@ const root = createRoot(document.getElementById('root'))
 
 root.render(
   <StrictMode>
-    <Provider store={store}>
-      <ChakraProvider theme={theme}>
-        <RouterProvider router={router} />
-      </ChakraProvider>
-    </Provider>
+    <ChakraProvider theme={theme}>
+      <RouterProvider router={router} />
+    </ChakraProvider>
   </StrictMode>
 )
