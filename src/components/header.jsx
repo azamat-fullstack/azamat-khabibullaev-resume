@@ -1,11 +1,16 @@
-import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { links } from '../constants'
 import { useColorMode } from '@chakra-ui/react'
 
 function Header() {
   const [menu, setMenu] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }, [pathname])
 
   const openMenu = () => {
     setMenu(true)
