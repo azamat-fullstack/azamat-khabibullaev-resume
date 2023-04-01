@@ -10,6 +10,7 @@ export const theme = extendTheme({
   styles: {
     global: (props) => ({
       body: {
+        fontFamily: 'var(--body-font)',
         bg:
           props.colorMode === 'dark' ? 'var(--body-color)' : 'var(--body-color)'
       }
