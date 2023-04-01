@@ -18,6 +18,7 @@
     box-shadow: var(--b-shadow);
     padding-inline: var(--m-1-5);
     border-radius: 3rem;
+    transition: background-color 0.4s; /* For dark mode animation */
   }
 
   &__logo-link,

@@ -29,6 +29,7 @@
     justify-self: center;
     border-radius: 6.25rem;
     place-items: center;
+    transition: background-color 0.4s; /* For dark mode animation */
   }
 
   &__profile {

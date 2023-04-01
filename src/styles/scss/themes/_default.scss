@@ -8,3 +8,40 @@ body.chakra-ui-dark {
   --body-color: hsl(var(--hue-color), 4%, 10%);
   --container-color: hsl(var(--hue-color), 4%, 12%);
 }
+
+.chakra-ui-dark .header__container,
+.chakra-ui-dark .header__menu,
+.chakra-ui-dark .scroll-up {
+  background-color: var(--container-color);
+  box-shadow: 0 4px 20px hsla(var(--hue-color), 24%, 8%, 0.4);
+}
+
+.chakra-ui-dark .home__shape-waves,
+.chakra-ui-dark .home__shape-circle,
+.chakra-ui-dark .qualification__img,
+.chakra-ui-dark .testimonials__img {
+  filter: invert(1);
+}
+
+.chakra-ui-dark .home__social-link {
+  color: var(--title-color);
+  &:hover {
+    color: var(--text-color-light);
+  }
+}
+
+.chakra-ui-dark .section__border {
+  border-bottom: 1px solid hsl(var(--hue-color), 4%, 32%);
+}
+
+.chakra-ui-dark::-webkit-scrollbar {
+  background-color: hsl(var(--hue-color), 4%, 15%);
+}
+
+.chakra-ui-dark::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue-color), 4%, 25%);
+}
+
+.chakra-ui-dark::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue-color), 4%, 35%);
+}

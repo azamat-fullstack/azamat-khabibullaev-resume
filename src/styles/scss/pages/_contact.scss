@@ -100,6 +100,7 @@
     font-size: var(--smaller-font-size);
     font-weight: var(--font-medium);
     padding: 0.35rem;
+    transition: background-color 0.4s; /* For dark mode animation */
   }
 
   &__form-area {
