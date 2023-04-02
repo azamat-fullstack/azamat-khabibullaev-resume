@@ -6,13 +6,19 @@ import Services from './services'
 import Projects from './projects'
 import TestimonialsSwiper from '../components/testimonials-swiper'
 import Contact from './contact'
+import { motion } from 'framer-motion'
 
 function Home() {
   return (
     <>
       <section className="home section" id="home">
         <div className="home__container container grid section__border">
-          <div className="home__data grid">
+          <motion.div
+            className="home__data grid"
+            initial={{ y: -200, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+          >
             <h1 className="home__title">
               Hi, I'm Azamat <br /> Frontend Developer <br /> Based in Tashkent
             </h1>
@@ -63,17 +69,22 @@ function Home() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </motion.div>
 
           <div className="home__info">
             {biographies.map((biography) => {
               return (
-                <div key={biography.id}>
+                <motion.div
+                  key={biography.id}
+                  initial={{ x: -100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                >
                   <h3 className="home__info-title">{biography.title}</h3>
                   <div className="home__info-description">
                     {biography.description}
                   </div>
-                </div>
+                </motion.div>
               )
             })}
           </div>
@@ -81,10 +92,15 @@ function Home() {
           <div className="home__info">
             {experiences.map((experience) => {
               return (
-                <div key={experience.id}>
+                <motion.div
+                  key={experience.id}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ duration: 1.5 }}
+                >
                   <h3 className="home__info-title">{experience.title}</h3>
                   <div className="home__info-number">{experience.number}</div>
-                </div>
+                </motion.div>
               )
             })}
           </div>
@@ -99,9 +115,14 @@ function Home() {
         <span className="section__subtitle">My client saying</span>
 
         <div className="container section__border">
-          <div className="testimonials__container">
+          <motion.div
+            className="testimonials__container"
+            initial={{ y: -100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1.5 }}
+          >
             <TestimonialsSwiper />
-          </div>
+          </motion.div>
         </div>
 
         <img

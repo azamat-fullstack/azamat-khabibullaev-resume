@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 function Qualification() {
   return (
     <section className="qualification section" id="qualification">
@@ -5,7 +7,12 @@ function Qualification() {
       <span className="section__subtitle">Experience & Education</span>
 
       <div className="qualification__container container grid section__border">
-        <div className="qualification__content">
+        <motion.div
+          className="qualification__content"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <h3 className="qualification__title">
             <i className="ri-pencil-ruler-2-line"></i>
             Education
@@ -19,9 +26,14 @@ function Qualification() {
               <span className="qualification__year">2011 / 2014</span>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="qualification__content">
+        <motion.div
+          className="qualification__content"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <h3 className="qualification__title">
             <i className="ri-building-line"></i>
             Work
@@ -35,7 +47,7 @@ function Qualification() {
               <span className="qualification__year">2021 / 2023</span>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <img

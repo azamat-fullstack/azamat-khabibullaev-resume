@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function Contact() {
   return (
@@ -7,7 +8,12 @@ function Contact() {
       <span className="section__subtitle">Get in touch</span>
 
       <div className="contact__container container grid section__border">
-        <div className="contact__content">
+        <motion.div
+          className="contact__content"
+          initial={{ x: -100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <h3 className="contact__title">
             <i className="ri-chat-3-line"></i> Talk to me
           </h3>
@@ -53,9 +59,14 @@ function Contact() {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="contact__content">
+        <motion.div
+          className="contact__content"
+          initial={{ x: 100, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <h3 className="contact__title">
             <i className="ri-send-plane-line"></i> Write me your project
           </h3>
@@ -106,7 +117,7 @@ function Contact() {
               Submit <i className="ri-arrow-right-up-line"></i>
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 function Services() {
   return (
     <section className="services section" id="services">
@@ -5,7 +7,12 @@ function Services() {
       <span className="section__subtitle">What I offer</span>
 
       <div className="services__container container grid section__border">
-        <div className="services__card">
+        <motion.div
+          className="services__card"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <i className="ri-window-line"></i>
           <h2 className="services__title">Website Development</h2>
           <p className="services__description">
@@ -13,9 +20,14 @@ function Services() {
             client, with professional work and customer support.
           </p>
           <div className="services__border"></div>
-        </div>
+        </motion.div>
 
-        <div className="services__card">
+        <motion.div
+          className="services__card"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <i className="ri-server-line"></i>
           <h2 className="services__title">Backend Development</h2>
           <p className="services__description">
@@ -23,9 +35,14 @@ function Services() {
             client, with professional work and customer support.
           </p>
           <div className="services__border"></div>
-        </div>
+        </motion.div>
 
-        <div className="services__card">
+        <motion.div
+          className="services__card"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <i className="ri-smartphone-line"></i>
           <h2 className="services__title">Mobile Development</h2>
           <p className="services__description">
@@ -33,7 +50,7 @@ function Services() {
             client, with professional work and customer support.
           </p>
           <div className="services__border"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

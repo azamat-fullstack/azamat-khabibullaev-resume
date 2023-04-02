@@ -1,4 +1,5 @@
 import ProjectsSwiper from '../components/projects-swiper'
+import { motion } from 'framer-motion'
 
 function Projects() {
   return (
@@ -7,9 +8,14 @@ function Projects() {
       <span className="section__subtitle">Most recent works</span>
 
       <div className="container section__border">
-        <div className="projects__container">
+        <motion.div
+          className="projects__container"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
           <ProjectsSwiper />
-        </div>
+        </motion.div>
       </div>
     </section>
   )

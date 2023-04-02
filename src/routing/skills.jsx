@@ -1,4 +1,5 @@
 import { skills } from '../constants'
+import { motion } from 'framer-motion'
 
 function Skills() {
   return (
@@ -8,7 +9,12 @@ function Skills() {
 
       <div className="skills__container container grid section__border">
         {skills.map((skill) => (
-          <div className="skills__content" key={skill.key}>
+          <motion.div
+            className="skills__content" key={skill.key}
+            initial={{ x: skill.key === 'front' ? -200 : 200, opacity: 0 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.5 }}
+          >
             <h3 className="skills__title">
               {skill.icon} {skill.title}
             </h3>
@@ -27,7 +33,7 @@ function Skills() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

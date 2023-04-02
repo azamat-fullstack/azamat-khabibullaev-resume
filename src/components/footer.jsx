@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="footer__container container">
+      <motion.div
+        className="footer__container container"
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1.5 }}
+      >
         <div className="footer__logo">
           <Link className="footer__logo-link" to="/">
             <h1 className="footer__logo-title">Azamat</h1>
@@ -71,7 +77,7 @@ function Footer() {
           />
           by Azamat Khabibullaev
         </span>
-      </div>
+      </motion.div>
     </footer>
   )
 }
