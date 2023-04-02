@@ -10,7 +10,8 @@ function Skills() {
       <div className="skills__container container grid section__border">
         {skills.map((skill) => (
           <motion.div
-            className="skills__content" key={skill.key}
+            className="skills__content"
+            key={skill.key}
             initial={{ x: skill.key === 'front' ? -200 : 200, opacity: 0 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5 }}
