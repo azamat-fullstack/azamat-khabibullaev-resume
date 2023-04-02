@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion'
+import { useMediaQuery } from 'react-responsive'
 
 function Services() {
+  const isTablet = useMediaQuery({
+    query: '(min-width: 767px)'
+  })
+
   return (
     <section className="services section" id="services">
       <h2 className="section__title">Services</h2>
@@ -9,8 +14,8 @@ function Services() {
       <div className="services__container container grid section__border">
         <motion.div
           className="services__card"
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={isTablet ? { y: -100, opacity: 0 } : { x: -100, opacity: 0 }}
+          whileInView={isTablet ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <i className="ri-window-line"></i>
@@ -24,8 +29,8 @@ function Services() {
 
         <motion.div
           className="services__card"
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={isTablet ? { y: -100, opacity: 0 } : { x: 100, opacity: 0 }}
+          whileInView={isTablet ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <i className="ri-server-line"></i>
@@ -39,8 +44,8 @@ function Services() {
 
         <motion.div
           className="services__card"
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={isTablet ? { y: -100, opacity: 0 } : { x: -100, opacity: 0 }}
+          whileInView={isTablet ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <i className="ri-smartphone-line"></i>

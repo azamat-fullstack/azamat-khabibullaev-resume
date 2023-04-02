@@ -114,16 +114,16 @@ function Home() {
         <h2 className="section__title">Testimonials</h2>
         <span className="section__subtitle">My client saying</span>
 
-        <div className="container section__border">
-          <motion.div
-            className="testimonials__container"
-            initial={{ y: -100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.5 }}
-          >
+        <motion.div
+          className="container section__border"
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          <div className="testimonials__container">
             <TestimonialsSwiper />
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         <img
           className="testimonials__img"

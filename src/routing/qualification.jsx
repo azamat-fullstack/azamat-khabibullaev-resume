@@ -1,6 +1,11 @@
 import { motion } from 'framer-motion'
+import { useMediaQuery } from 'react-responsive'
 
 function Qualification() {
+  const isTablet = useMediaQuery({
+    query: '(min-width: 767px)'
+  })
+
   return (
     <section className="qualification section" id="qualification">
       <h2 className="section__title">Qualification</h2>
@@ -9,8 +14,8 @@ function Qualification() {
       <div className="qualification__container container grid section__border">
         <motion.div
           className="qualification__content"
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={isTablet ? { y: -100, opacity: 0 } : { x: -100, opacity: 0 }}
+          whileInView={isTablet ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <h3 className="qualification__title">
@@ -30,8 +35,8 @@ function Qualification() {
 
         <motion.div
           className="qualification__content"
-          initial={{ y: -100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
+          initial={isTablet ? { y: -100, opacity: 0 } : { x: 100, opacity: 0 }}
+          whileInView={isTablet ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
         >
           <h3 className="qualification__title">
