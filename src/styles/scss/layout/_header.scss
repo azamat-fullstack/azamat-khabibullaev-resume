@@ -8,6 +8,13 @@
   bottom: 2rem;
   left: 0;
   z-index: var(--z-fixed);
+  @media screen and (min-width: 1023px) {
+    top: 0;
+    bottom: initial;
+    background-color: var(--body-color);
+    transition: 0.4s;
+    box-shadow: var(--b-shadow);
+  }
 
   &__container {
     height: calc(var(--header-height) + 0.5rem);
@@ -19,6 +26,19 @@
     padding-inline: var(--m-1-5);
     border-radius: 3rem;
     transition: background-color 0.4s; /* For dark mode animation */
+    @media screen and (min-width: 576px) {
+      width: 380px;
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 1023px) {
+      width: initial;
+      height: calc(var(--header-height) + 1.5rem);
+      box-shadow: none;
+      border-radius: 0;
+      column-gap: 3rem;
+      margin-inline: 1.5rem;
+      padding: 0;
+    }
   }
 
   &__logo-link,
@@ -37,13 +57,16 @@
   &__open-menu {
     display: flex;
     font-size: 1.25rem;
+    @media screen and (min-width: 1023px) {
+      display: none;
+    }
   }
 
   &__menu {
     &.show-menu {
       bottom: 2rem;
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 1023px) {
       position: fixed;
       width: 88%;
       bottom: -100%;
@@ -56,12 +79,32 @@
       border-radius: 2rem;
       transition: var(--transition);
     }
+    @media screen and (max-width: 340px) {
+      padding-bottom: 4rem;
+    }
+    @media screen and (min-width: 576px) {
+      width: 380px;
+    }
+    @media screen and (min-width: 1023px) {
+      width: initial;
+      margin-left: auto;
+      background-color: var(--body-color);
+      transition: background-color 0.4s;
+    }
   }
 
   &__nav-list {
     grid-template-columns: repeat(3, max-content);
-    justify-content: center;
+    justify-content: space-between;
     gap: 2rem 3rem;
+    @media screen and (max-width: 340px) {
+      gap: 1rem 1.25rem;
+    }
+    @media screen and (min-width: 1023px) {
+      display: flex;
+      align-items: center;
+      column-gap: 3rem;
+    }
   }
 
   &__nav-link {
@@ -73,11 +116,17 @@
     font-weight: var(--font-medium);
     color: var(--text-color-light);
     transition: color var(--transition);
+    @media screen and (min-width: 1023px) {
+      font-size: var(--normal-font-size);
+    }
     &:hover {
       color: var(--title-color);
     }
     i {
       font-size: 1.25rem;
+      @media screen and (min-width: 1023px) {
+        display: none;
+      }
     }
     &.active {
       color: var(--title-color);
@@ -89,6 +138,9 @@
     right: 1.5rem;
     bottom: 0.7rem;
     font-size: 1.5rem;
+    @media screen and (min-width: 1023px) {
+      display: none;
+    }
   }
 
   &__buttons {
@@ -101,5 +153,11 @@
     display: flex;
     font-size: 1.25rem;
     transition: color var(--transition);
+    @media screen and (min-width: 1023px) {
+      color: var(--text-color-light);
+      &:hover {
+        color: var(--title-color);
+      }
+    }
   }
 }

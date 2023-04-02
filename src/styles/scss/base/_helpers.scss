@@ -5,15 +5,27 @@
 .container {
   max-width: var(--max-width);
   margin-inline: var(--m-1-5);
+  @media screen and (max-width: 340px) {
+    margin-inline: var(--m-1);
+  }
+  @media screen and (min-width: 1048px) {
+    margin-inline: auto;
+  }
 }
 
 .section {
   padding-block: var(--m-2-5);
+  @media screen and (min-width: 1023px) {
+    padding-block: 8rem 0;
+  }
 }
 
 .section__border {
   border-bottom: 1px solid var(--title-color);
   padding-bottom: 3.5rem;
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 6rem;
+  }
 }
 
 .section__title {
@@ -28,6 +40,9 @@
   font-size: var(--small-font-size);
   color: var(--text-color-light);
   margin-bottom: var(--m-3);
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 5rem;
+  }
 }
 
 .section__title,

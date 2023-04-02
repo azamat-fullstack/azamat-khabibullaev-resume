@@ -2,6 +2,13 @@
   &__container {
     row-gap: 2.5rem;
     justify-content: center;
+    @media screen and (min-width: 767px) {
+      grid-template-columns: repeat(2, max-content);
+      column-gap: 5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      grid-template-columns: repeat(3, max-content);
+    }
   }
 
   &__card {
@@ -16,13 +23,21 @@
     flex-direction: column;
     justify-content: center;
     transition: background-color 0.4s; /* For dark mode animation */
-
+    @media screen and (min-width: 1200px) {
+      width: 245px;
+      height: 345px;
+      border-radius: 7.6rem;
+      padding: 3.5rem 1.5rem;
+    }
     i {
       display: block;
       font-size: 2rem;
       color: var(--title-color);
       margin-bottom: var(--m-0-75);
       transition: transform 0.8s;
+      @media screen and (min-width: 1200px) {
+        font-size: 2.5rem;
+      }
     }
 
     &:hover {
@@ -53,5 +68,10 @@
     z-index: -1;
     transition: opacity 0.6s;
     opacity: 0;
+    @media screen and (min-width: 1200px) {
+      width: 265px;
+      height: 365px;
+      border-radius: 8.25rem;
+    }
   }
 }

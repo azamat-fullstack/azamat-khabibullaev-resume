@@ -1,5 +1,17 @@
 .projects {
   &__container {
+    @media screen and (min-width: 576px) {
+      width: 400px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    @media screen and (min-width: 767px) {
+      width: 500px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 900px;
+    }
+
     position: relative;
     .swiper-button-prev::after,
     .swiper-button-next::after {
@@ -14,56 +26,44 @@
       margin: initial;
       font-size: 2.5rem;
       color: var(--title-color);
+      @media screen and (min-width: 1200px) {
+        font-size: 3rem;
+      }
     }
 
     .swiper-button-prev {
-      left: -2rem;
+      left: -1rem;
       top: 4.5rem;
-      @media screen and (min-width: 340px) {
-        left: -1rem;
-      }
-      @media screen and (min-width: 425px) {
-        left: 1rem;
+      @media screen and (max-width: 340px) {
+        top: 2.5rem;
       }
       @media screen and (min-width: 576px) {
-        left: 5rem;
-      }
-      @media screen and (min-width: 720px) {
-        left: 10rem;
-      }
-      @media screen and (min-width: 768px) {
         left: 1rem;
       }
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1200px) {
         left: -1rem;
       }
     }
 
     .swiper-button-next {
-      right: -2rem;
+      right: -1rem;
       top: 4.5rem;
-      @media screen and (min-width: 340px) {
-        right: -1rem;
-      }
-      @media screen and (min-width: 425px) {
-        right: 1rem;
+      @media screen and (max-width: 340px) {
+        top: 2.5rem;
       }
       @media screen and (min-width: 576px) {
-        right: 5rem;
-      }
-      @media screen and (min-width: 720px) {
-        right: 10rem;
-      }
-      @media screen and (min-width: 768px) {
         right: 1rem;
       }
-      @media screen and (min-width: 1024px) {
+      @media screen and (min-width: 1200px) {
         right: -1rem;
       }
     }
 
     .swiper-slide {
       margin-bottom: 4.5rem;
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 6.5rem;
+      }
     }
 
     .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -89,6 +89,14 @@
     width: 250px;
     border-radius: 0.75rem;
     margin-bottom: var(--m-1-25);
+    @media screen and (max-width: 340px) {
+      width: 200px;
+      justify-self: center;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 320px;
+      margin-bottom: 2rem;
+    }
   }
 
   &__subtitle {

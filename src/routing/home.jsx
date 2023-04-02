@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <section className="home section" id="home">
-        <div className="home__container container section__border">
+        <div className="home__container container grid section__border">
           <div className="home__data grid">
             <h1 className="home__title">
               Hi, I'm Azamat <br /> Frontend Developer <br /> Based in Tashkent

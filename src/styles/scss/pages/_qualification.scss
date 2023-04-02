@@ -3,6 +3,14 @@
 
   &__container {
     row-gap: 3.5rem;
+    @media screen and (min-width: 767px) {
+      grid-template-columns: repeat(2, max-content);
+      justify-content: center;
+      column-gap: 10rem;
+    }
+    @media screen and (min-width: 1200px) {
+      column-gap: 14rem;
+    }
   }
 
   &__title {
@@ -13,10 +21,15 @@
     font-size: var(--small-font-size);
     font-weight: var(--font-semi-bold);
     margin-bottom: var(--m-2);
-
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 3rem;
+    }
     i {
       font-size: 1rem;
       font-weight: initial;
+      @media screen and (min-width: 1200px) {
+        font-size: 1.25rem;
+      }
     }
   }
 
@@ -28,6 +41,9 @@
   &__name {
     font-size: var(--normal-font-size);
     margin-bottom: var(--m-1-25);
+    @media screen and (min-width: 1200px) {
+      font-size: var(--h3-font-size);
+    }
   }
 
   &__country,
@@ -48,5 +64,10 @@
     bottom: 12rem;
     transform: rotate(15deg);
     opacity: 0.1;
+    @media screen and (min-width: 1200px) {
+      width: 300px;
+      left: -6rem;
+      bottom: 5rem;
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { Navigation, Pagination } from 'swiper'
+import { Navigation } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
 const testimonials = [
@@ -34,15 +34,12 @@ function TestimonialsSwiper() {
     <>
       <Swiper
         grabCursor={true}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation]}
         spaceBetween={24}
         slidesPerView={1}
         navigation={{
           prevEl: navigationPrevRef.current,
           nextEl: navigationNextRef.current
-        }}
-        pagination={{
-          clickable: true
         }}
         onSwiper={(swiper) => {
           // Delay execution for the refs to be defined
